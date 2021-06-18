@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面向对象轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #Bbox {
+            width: 250px;
+            height: 200px;
+            margin: 100px auto;
+        }
+
+        #box {
+            width: 250px;
+            height: 200px;
+            border: 5px groove goldenrod;
+            position: relative;
+            overflow: hidden;
+        }
+
+        ul {
+            height: 200px;
+            position: absolute;
+        }
+
+        ul li {
+            list-style: none;
+            float: left;
+        }
+
+        ul li img {
+            width: 250px;
+            height: 200px;
+            display: block;
+        }
+
+        #dir {
+            position: absolute;
+            z-index: 1;
+            color: #fff;
+            width: 100%;
+            height: 100%;
+            display: none;
+            opacity: .6;
+        }
+
+        #left {
+            position: absolute;
+            left: 0;
+            top: 43%;
+            background: pink;
+            text-align: center;
+            width: 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        #right {
+            text-align: center;
+            position: absolute;
+            right: 0;
+            top: 43%;
+            background: pink;
+            width: 20px;
+            height: 30px;
+            line-height: 30px;
+        }
+        #circle{
+            position: absolute;
+            left: 21%;
+            bottom: 8px;
+            opacity: .6;
+            z-index: 9;
+        }
+        span{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: pink;
+            text-align: center;
+            font: 12px/15px '';
+            border-radius: 50%;
+            margin:0 5px;
+        }
+        .active{
+            background: greenyellow !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Bbox">
+        <div id="box">
+            <ul>
+                <li><img src="./picture/LG1.png" alt=""></li>
+                <li><img src="./picture/LG2.png" alt=""></li>
+                <li><img src="./picture/LG3.png" alt=""></li>
+                <li><img src="./picture/LG4.png" alt=""></li>
+                <li><img src="./picture/LG5.jpg" alt=""></li>
+                <li><img src="./picture/LG6.jpg" alt=""></li>
+            </ul>
+            <div id="dir">
+                <div id="left">&lt;</div>
+                <div id="right">&gt;</div>
+            </div>
+            <div id="circle">
+               <!--  <span class="active">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+                <span>6</span> -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./move.js"></script>
+<script src="./index.js"></script>
